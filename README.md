@@ -8,3 +8,6 @@
 4. Run http server e.g. `python -m SimpleHTTPServer 9909`, `python3 -m http.server 9909`, `ruby -run -e httpd -- --port=9909 .`, etc.
 5. Open http://localhost:9909/ by your browser.
 
+# Demo
+
+<http://aws-price-chart.herokuapp.com/>
