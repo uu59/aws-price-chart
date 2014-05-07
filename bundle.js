@@ -20047,9 +20047,9 @@ function fetchPriceData() {
   }).then(function(data){
     var formatted = data.map(function(d){
       return d.prices.map(function(price){
-        var values = [];
+        var values = [{x: 0, y: price.once}];
         var sum = price.once;
-        for(var i=0; i<=MONTHS; i++){
+        for(var i=1; i<=MONTHS; i++){
           if(i > 1 && (i % 12) === 1 && price.plan.match(/1y$/)){
             sum += price.once;
           }
