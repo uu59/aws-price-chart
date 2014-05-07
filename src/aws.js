@@ -56,7 +56,7 @@ function fetchInstanceSizes(region) {
       type.sizes.forEach(function(size){
         result.push({
           "size": size.size, // m3.medium
-          "price": size.valueColumns[0].prices.USD, // 0.070
+          "price": +size.valueColumns[0].prices.USD, // 0.070
           "region": region
         });
       });

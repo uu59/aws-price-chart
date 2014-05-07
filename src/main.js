@@ -12,8 +12,9 @@ function init() {
     AWS.fetchInstanceSizes(region).then(function(sizes){
       var selSize = document.querySelector('#sizes');
       selSize.innerHTML = "<option>--</option>";
+      sizes.sort(function(a,b){ return a.price - b.price; });
       sizes.forEach(function(size){
-        selSize.innerHTML += '<option value="'+size.size+'">'+size.size+'</option>';
+        selSize.innerHTML += '<option value="'+size.size+'">'+size.size+" ($"+size.price+'/h)</option>';
       });
 
       if(util.params().size){
