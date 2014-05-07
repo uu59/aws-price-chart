@@ -10,4 +10,4 @@
 
 # Demo
 
-<http://aws-price-chart.herokuapp.com/>
+<http://uu59.github.io/aws-price-chart/>
